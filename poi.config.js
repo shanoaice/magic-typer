@@ -1,5 +1,3 @@
-const isCI = require('is-ci')
-
 module.exports = {
   entry: ['src/registerServiceWorker', 'src/index'],
   plugins: [
@@ -11,6 +9,7 @@ module.exports = {
     }
   ],
   output: {
-    publicUrl: isCI ? '/magic-typer/' : '/'
+    publicUrl:
+      process.env.GITHUB_ACTIONS.toString() === 'true' ? '/magic-typer/' : '/'
   }
 }
