@@ -1,0 +1,49 @@
+{
+  "name": "magic-typer",
+  "private": true,
+  "scripts": {
+    "build": "poi --prod",
+    "dev": "poi --serve",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@poi/plugin-eslint": "^12.0.0",
+    "@poi/plugin-pwa": "^12.0.2",
+    "@snackbar/core": "^1.7.0",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-config-rem": "4.0.0",
+    "eslint-config-xo": "^0.25.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "husky": "4.2.3",
+    "lint-staged": "10.0.7",
+    "node-sass": "^4.13.1",
+    "poi": "^12.4.2",
+    "prettier": "1.19.1",
+    "sass-loader": "^8.0.2",
+    "workbox-window": "^4.3.1"
+  },
+  "dependencies": {
+    "@storeon/localstorage": "^0.11.0",
+    "storeon": "^0.9.8"
+  },
+  "xo": {
+    "extends": [
+      "rem",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.{json,md,scss}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

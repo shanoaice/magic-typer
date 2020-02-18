@@ -1,0 +1,115 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr) 8fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  min-height: 97vh;
+  max-height: 97vh;
+}
+
+.title-area {
+  grid-area: 1 / 1 / 2 / 3;
+  padding: 5px 15px;
+  background-color: white;
+  border: 2px solid black;
+
+  h1 {
+    color: blue;
+  }
+}
+
+.left-subtitle-area {
+  grid-area: 2 / 1 / 3 / 2;
+  padding: 5px 5px;
+  background-color: palevioletred;
+  align-self: stretch;
+  justify-self: stretch;
+
+  h2 {
+    color: palegreen;
+  }
+}
+
+.right-subtitle-area {
+  grid-area: 2 / 2 / 3 / 3;
+  padding: 5px 5px;
+  background-color: palegreen;
+  align-self: stretch;
+  justify-self: stretch;
+
+  h2 {
+    color: palevioletred;
+  }
+}
+
+.left-input {
+  grid-area: 3 / 1 / 4 / 2;
+  align-self: stretch;
+  justify-self: stretch;
+}
+
+.right-input {
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: stretch;
+  justify-self: stretch;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr) 8fr 1fr 8fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    min-height: 200vh;
+    max-height: 200vh;
+  }
+
+  .title-area {
+    grid-area: 1 / 1 / 2 / 3;
+    padding: 5px 15px;
+    background-color: white;
+    border: 2px solid black;
+
+    h1 {
+      color: blue;
+    }
+  }
+
+  .left-subtitle-area {
+    grid-area: 2 / 1 / 3 / 2;
+    padding: 5px 5px;
+    background-color: palevioletred;
+    align-self: stretch;
+    justify-self: stretch;
+
+    h2 {
+      color: palegreen;
+    }
+  }
+
+  .right-subtitle-area {
+    grid-area: 4 / 1 / 5 / 2;
+    padding: 5px 5px;
+    background-color: palegreen;
+    align-self: stretch;
+    justify-self: stretch;
+
+    h2 {
+      color: palevioletred;
+    }
+  }
+
+  .left-input {
+    grid-area: 3 / 1 / 4 / 2;
+    align-self: stretch;
+    justify-self: stretch;
+  }
+
+  .right-input {
+    grid-area: 5 / 1 / 6 / 2;
+    align-self: stretch;
+    justify-self: stretch;
+  }
+}
