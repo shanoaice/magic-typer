@@ -9,7 +9,6 @@ module.exports = {
     }
   ],
   output: {
-    publicUrl:
-      process.env.GITHUB_ACTIONS.toString() === 'true' ? '/magic-typer/' : '/'
+    publicUrl: process.env.GITHUB_ACTIONS ? '/magic-typer/' : '/'
   }
 }
